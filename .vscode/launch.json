@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'vigilant-octo-broccoli'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=vigilant-octo-broccoli",
+                    "--package=vigilant-octo-broccoli"
+                ],
+                "filter": {
+                    "name": "vigilant-octo-broccoli",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'vigilant-octo-broccoli'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=vigilant-octo-broccoli",
+                    "--package=vigilant-octo-broccoli"
+                ],
+                "filter": {
+                    "name": "vigilant-octo-broccoli",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
